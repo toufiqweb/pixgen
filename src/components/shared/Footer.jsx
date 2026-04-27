@@ -30,7 +30,8 @@ const Footer = () => {
                 height={32}
                 className="dark:brightness-200"
               />
-              <h2 className="text-xl font-semibold tracking-tight text-black dark:text-white">
+              <h2 className="text-xl font-semibold  dark:text-white  tracking-wide bg-linear-to-r from-pink-500 via-purple-500 
+               to-red-500 bg-clip-text text-transparent drop-shadow-sm">
                 pixgen
               </h2>
             </div>
@@ -119,10 +120,11 @@ const Footer = () => {
 
             <Link
               href="/signup"
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-full 
-              bg-black text-white dark:bg-white dark:text-black 
-              text-sm font-medium transition-all duration-200 
-              hover:scale-[1.02] hover:shadow-lg hover:shadow-black/10 dark:hover:shadow-white/10"
+              className="inline-flex items-center justify-center  rounded-full 
+              bg-black dark:bg-white dark:text-black text-sm  
+              hover:scale-[1.02]  hover:shadow-black/10 dark:hover:shadow-white/10 
+              border border-purple-400 px-5 py-2 font-medium text-white bg-linear-to-r 
+            from-pink-500 via-purple-500 to-red-500 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               Get Started
             </Link>
