@@ -1,5 +1,6 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/shared/Navbar";
 
 const OutfitFont = Outfit({
   subsets: ["latin"],
@@ -13,7 +14,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${OutfitFont.className}  h-full antialiased`}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main className="container mx-auto space-y-5">{children}</main>
+      </body>
     </html>
   );
 }
