@@ -19,7 +19,7 @@ const PhotoDetailsPage = async ({ params }) => {
   }
 
   return (
-    <div className="min-h-[60vh] bg-gradient-to-br from-[#050816] via-[#1f1147] to-[#3b0764] px-4 py-12 rounded-2xl my-10 flex items-center justify-center relative overflow-hidden">
+    <div className="min-h-[60vh] max-w-7xl mx-auto space-y-5 bg-linear-to-br from-[#050816] via-[#1f1147] to-[#3b0764] px-4 py-12 rounded-2xl my-10 flex items-center justify-center relative overflow-hidden">
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10">
         {/* IMAGE SECTION */}
         <div className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/10">

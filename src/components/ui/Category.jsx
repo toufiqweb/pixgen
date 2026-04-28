@@ -10,7 +10,7 @@ const CategoryPage = async () => {
     <div className="w-full py-12 px-4">
       {/* Section Header */}
       <div className="mb-10 flex flex-col items-start">
-        <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold tracking-tight bg-linear-to-r from-pink-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
           Explore Categories
         </h2>
         <p className="text-gray-400 mt-2 text-lg">
@@ -28,7 +28,7 @@ const CategoryPage = async () => {
           >
             <div className="
               relative py-2 rounded-3xl overflow-hidden
-              bg-gradient-to-br from-zinc-900 to-zinc-950
+              bg-linear-to-br from-zinc-900 to-zinc-950
               border border-white/10
               backdrop-blur-xl
               transition-all duration-500
@@ -39,13 +39,13 @@ const CategoryPage = async () => {
             ">
               {/* Animated Background Gradient */}
               <div className="
-                absolute inset-0 bg-gradient-to-br from-pink-500/10 via-purple-500/10 to-indigo-500/10
+                absolute inset-0 bg-linear-to-br from-pink-500/10 via-purple-500/10 to-indigo-500/10
                 opacity-0 group-hover:opacity-100 transition-opacity duration-500
               " />
 
               {/* Subtle Shine Effect */}
               <div className="
-                absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent
+                absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent
                 -skew-x-12 -translate-x-full group-hover:translate-x-full
                 transition-transform duration-700
               " />
@@ -65,7 +65,7 @@ const CategoryPage = async () => {
               {/* Bottom Glow Accent */}
               <div className="
                 absolute bottom-0 left-0 right-0 h-px 
-                bg-gradient-to-r from-transparent via-purple-400 to-transparent
+                bg-linear-to-r from-transparent via-purple-400 to-transparent
                 scale-x-0 group-hover:scale-x-100 transition-transform duration-500
               " />
             </div>

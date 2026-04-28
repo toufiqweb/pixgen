@@ -17,7 +17,7 @@ const AllPhotosPage = async ({ searchParams }) => {
 
   console.log(photos);
   return (
-    <div className="mt-15 space-y-10">
+    <div className="mt-15  max-w-7xl mx-auto space-y-5">
       <h1 className="text-4xl font-bold text-center">All Photos</h1>
 
       <CategoryPage />
