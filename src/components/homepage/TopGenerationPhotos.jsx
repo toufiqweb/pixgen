@@ -1,4 +1,4 @@
-import { getAllPhotos } from "@/lib/data/getAllPhotos";
+import { getAllPhotos } from "@/lib/getAllPhotos";
 import React from "react";
 import PhotoCard from "../ui/PhotoCard";
 import { Button } from "@heroui/react";
@@ -9,7 +9,6 @@ const TopGenerationPhotos = async () => {
   const photos = await getAllPhotos();
   console.log(photos);
   const topPhotos = photos.slice(0, 8);
-
   return (
     <div className="mt-15 space-y-10">
       <h1 className="text-4xl font-bold text-center">Top Generation Photos</h1>

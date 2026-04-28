@@ -1,5 +1,5 @@
 [
-    {
+  {
     "id": 1,
     "title": "Realistic Portrait AI",
     "imageUrl": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg",
@@ -40,7 +40,7 @@
     "tags": ["city", "futuristic", "scifi", "sunset"]
   },
 
-     {
+  {
     "id": 4,
     "title": "Cyberpunk Samurai",
     "imageUrl": "https://i.pinimg.com/736x/99/cd/5f/99cd5f429b5e1e68bd14fcf49516245c.jpg",
@@ -195,5 +195,122 @@
     "downloads": 96,
     "createdAt": "2026-04-26T09:45:00Z",
     "tags": ["apocalyptic", "wasteland", "survivor", "scifi"]
+  },
+  {
+    "id": 16,
+    "title": "Neon Samurai Alley",
+    "imageUrl": "https://i.pinimg.com/736x/12/ea/15/12ea15a11d04a93216736aa559274f70.jpg",
+    "prompt": "A samurai walking through a neon-lit rainy alley, cyberpunk aesthetic, cinematic lighting",
+    "category": "Cyberpunk",
+    "model": "SDXL",
+    "resolution": "1024x1024",
+    "likes": 220,
+    "downloads": 60,
+    "createdAt": "2026-04-26T12:00:00Z",
+    "tags": ["samurai", "neon", "cyberpunk", "rain"]
+  },
+  {
+    "id": 17,
+    "title": "Crystal Sky Island",
+    "imageUrl": "https://i.pinimg.com/1200x/c4/d2/4c/c4d24cd2a5718649ea796a293a34d935.jpg",
+    "prompt": "Floating island made of crystal in the sky, glowing clouds, fantasy landscape",
+    "category": "Fantasy",
+    "model": "Midjourney v6",
+    "resolution": "1024x768",
+    "likes": 310,
+    "downloads": 85,
+    "createdAt": "2026-04-26T13:10:00Z",
+    "tags": ["island", "crystal", "sky", "fantasy"]
+  },
+  {
+    "id": 18,
+    "title": "Retro Robot Workshop",
+    "imageUrl": "https://i.pinimg.com/1200x/c0/39/eb/c039eb02ede4e73e214ea919f9790dd0.jpg",
+    "prompt": "Vintage robot repairing itself in an old workshop, warm lighting, steampunk details",
+    "category": "Steampunk",
+    "model": "Stable Diffusion",
+    "resolution": "960x640",
+    "likes": 175,
+    "downloads": 42,
+    "createdAt": "2026-04-26T14:20:00Z",
+    "tags": ["robot", "retro", "steampunk", "workshop"]
+  },
+  {
+    "id": 19,
+    "title": "Digital Dreamscape",
+    "imageUrl": "https://i.pinimg.com/webp/1200x/97/b4/2d/97b42dcc03596b645243c139d72ac939.webp",
+    "prompt": "Abstract digital dream world with floating shapes, neon gradients, surreal composition",
+    "category": "Surreal",
+    "model": "DALL·E 3",
+    "resolution": "1024x1024",
+    "likes": 260,
+    "downloads": 70,
+    "createdAt": "2026-04-26T15:30:00Z",
+    "tags": ["dream", "digital", "abstract", "neon"]
+  },
+  {
+    "id": 20,
+    "title": "Ancient Temple Jungle",
+    "imageUrl": "https://i.pinimg.com/1200x/03/34/89/03348946d5053979755b34224fb7e064.jpg",
+    "prompt": "Hidden ancient temple covered in jungle vines, misty atmosphere, cinematic lighting",
+    "category": "Fantasy",
+    "model": "Midjourney v6",
+    "resolution": "1280x720",
+    "likes": 415,
+    "downloads": 120,
+    "createdAt": "2026-04-26T16:40:00Z",
+    "tags": ["temple", "jungle", "ancient", "mist"]
+  },
+  {
+    "id": 21,
+    "title": "Holographic City Market",
+    "imageUrl": "https://i.pinimg.com/736x/94/5c/62/945c62eb6d02e16038b044fb22ec66ce.jpg",
+    "prompt": "Futuristic floating market with holograms, neon lights, busy sci-fi environment",
+    "category": "Sci-Fi",
+    "model": "SDXL",
+    "resolution": "1024x1024",
+    "likes": 198,
+    "downloads": 55,
+    "createdAt": "2026-04-26T17:50:00Z",
+    "tags": ["market", "hologram", "future", "city"]
+  },
+  {
+    "id": 22,
+    "title": "Golden Desert Warrior",
+    "imageUrl": "https://i.pinimg.com/736x/f3/8e/f5/f38ef52e8abc484f1deabbe5d616cf09.jpg",
+    "prompt": "A warrior standing in golden desert dunes, dramatic sunset, cinematic style",
+    "category": "Realistic",
+    "model": "Midjourney v6",
+    "resolution": "1024x768",
+    "likes": 289,
+    "downloads": 77,
+    "createdAt": "2026-04-26T18:10:00Z",
+    "tags": ["desert", "warrior", "sunset", "cinematic"]
+  },
+  {
+    "id": 23,
+    "title": "Glowing Mushroom Forest",
+    "imageUrl": "https://i.pinimg.com/736x/98/23/81/982381b922d4fe49f6c2ae6027b80784.jpg",
+    "prompt": "Magical forest filled with giant glowing mushrooms, bioluminescent light, fantasy mood",
+    "category": "Fantasy",
+    "model": "DALL·E 3",
+    "resolution": "1024x1024",
+    "likes": 340,
+    "downloads": 98,
+    "createdAt": "2026-04-26T18:40:00Z",
+    "tags": ["forest", "mushroom", "glow", "magic"]
+  },
+  {
+    "id": 24,
+    "title": "Aerial Neon Highway",
+    "imageUrl": "https://i.pinimg.com/1200x/8f/eb/79/8feb7980e2621b4d4e5cad1290cbb08d.jpg",
+    "prompt": "Futuristic aerial highway with flying cars, neon lights, cyberpunk skyline",
+    "category": "Cyberpunk",
+    "model": "SDXL",
+    "resolution": "1280x720",
+    "likes": 410,
+    "downloads": 130,
+    "createdAt": "2026-04-26T19:10:00Z",
+    "tags": ["highway", "futuristic", "cars", "neon"]
   }
 ]

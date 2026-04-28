@@ -74,14 +74,14 @@ const Banner = () => {
           <SwiperSlide key={index}>
             <div
               onClick={handleClick}
-              className="relative h-[55vh] md:h-[65vh] w-full cursor-pointer"
+              className="relative h-[55vh] md:h-[65vh] w-full cursor-pointer overflow-hidden"
             >
               {/* Background Image */}
               <div
                 style={{
                   backgroundImage: `url(${slide.image})`,
                 }}
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 transition-transform duration-700"
               />
 
               {/* Dark Overlay */}
