@@ -1,5 +1,6 @@
 import { Button, Card } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaDownload, FaHeart } from "react-icons/fa";
 
@@ -39,28 +40,30 @@ const PhotoCard = ({ photo }) => {
             <p className="text-sm font-medium text-white">{photo.category}</p>
             <div className="flex items-center gap-4 text-sm text-white/90">
               <div className="flex items-center gap-1">
-                 <FaHeart className="text-pink-700 transition" />
+                <FaHeart className="text-pink-700 transition" />
                 <span>{photo.likes || 0}</span>
               </div>
 
               <div className="flex items-center gap-1">
-                <FaDownload  />
+                <FaDownload />
                 <span>{photo.downloads || 0}</span>
               </div>
             </div>
           </div>
 
-          <Button
-            size="sm"
-            variant="outline"
-            className="
+          <Link href={`/all-photos/${photo.id}`}>
+            <Button
+              size="sm"
+              variant="outline"
+              className="
           border-white/30 text-white
           hover:bg-white hover:text-black
           transition-all duration-300
         "
-          >
-            View details
-          </Button>
+            >
+              View details
+            </Button>
+          </Link>
         </div>
       </div>
     </Card>
