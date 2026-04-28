@@ -12,6 +12,7 @@ import {
   ImageIcon,
   Pencil,
 } from "lucide-react";
+import UpdateUser from "@/components/ui/UpdateUser";
 
 const ProfilePage = () => {
   const { data: session, isPending } = authClient.useSession();
@@ -36,7 +37,7 @@ const ProfilePage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#050816] via-[#12082f] to-[#2b0b45] px-4 py-10">
+    <div className="min-h-screen bg-linear-to-br from-[#050816] via-[#12082f] to-[#2b0b45] px-4 py-10">
       <div className="max-w-7xl mx-auto">
         {/* Glow Effects */}
         <div className="absolute top-32 left-10 h-72 w-72 rounded-full bg-pink-500/20 blur-[120px]" />
@@ -45,13 +46,13 @@ const ProfilePage = () => {
         {/* Profile Hero */}
         <Card className="relative overflow-hidden rounded-[36px] border border-white/10 bg-white/10 backdrop-blur-2xl shadow-2xl">
           {/* Background Glow */}
-          <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 via-transparent to-purple-500/10" />
+          <div className="absolute inset-0 bg-linear-to-br from-pink-500/10 via-transparent to-purple-500/10" />
 
           <div className="relative z-10 p-8 md:p-12">
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10">
               {/* Avatar */}
               <div className="relative group">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 blur-xl opacity-50 group-hover:opacity-80 transition duration-500" />
+                <div className="absolute inset-0 rounded-full bg-linear-to-r from-pink-500 to-purple-600 blur-xl opacity-50 group-hover:opacity-80 transition duration-500" />
 
                 <Avatar className="w-36 h-36 text-4xl ring-4 ring-white/20 relative z-10 hover:scale-105 transition duration-500">
                   <Avatar.Image alt={user?.name} src={user?.image} />
@@ -118,12 +119,8 @@ const ProfilePage = () => {
 
                 {/* Actions */}
                 <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
-                  <Button
-                    startContent={<Pencil size={16} />}
-                    className="rounded-2xl bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg hover:scale-105 transition"
-                  >
-                    Edit Profile
-                  </Button>
+                    <UpdateUser user={user} />
+                  
 
                   <Button
                     variant="bordered"
