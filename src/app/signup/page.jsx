@@ -1,5 +1,6 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
   Button,
@@ -16,8 +17,22 @@ import { FaGoogle, FaGithub, FaFacebookF } from "react-icons/fa";
 export default function SignUpPage() {
   const onSubmit = async (e) => {
     e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const { name, email, password, image } = Object.fromEntries(
+      formData.entries(),
+    );
+
+    const { data, error } = await authClient.signUp.email({
+      email,
+      password,
+      name,
+      image,
+    });
+    console.log({ data, error });
   };
 
+  // Hello@1234
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#050816] via-[#1f1147] to-[#3b0764] flex items-center justify-center px-4 py-10">
       <Card className="w-full max-w-5xl overflow-hidden rounded-[32px] border border-white/10 bg-white/10 backdrop-blur-2xl shadow-2xl">
@@ -66,14 +81,16 @@ export default function SignUpPage() {
           {/* Right Side */}
           <div className="bg-white p-8 md:p-12">
             <div className="mb-8 text-center">
-              <h2 className="text-3xl font-bold text-gray-900">Create Account</h2>
+              <h2 className="text-3xl font-bold text-gray-900">
+                Create Account
+              </h2>
               <p className="text-gray-500 mt-2">
                 Sign up to continue your creative journey
               </p>
             </div>
 
             {/* Social Login */}
-            <div className="grid grid-cols-3 gap-3 mb-6">
+            <div className="grid grid-cols-3 gap-3 mb-6 justify-items-center">
               <Button
                 variant="bordered"
                 className="h-12 rounded-2xl border-gray-300 hover:bg-gray-100"
@@ -97,27 +114,21 @@ export default function SignUpPage() {
             </div>
 
             <div className="flex items-center gap-3 mb-6">
-  <div className="flex-1 h-px bg-gray-200" />
-  <span className="text-sm text-gray-400">OR</span>
-  <div className="flex-1 h-px bg-gray-200" />
-</div>
+              <div className="flex-1 h-px bg-gray-200" />
+              <span className="text-sm text-gray-400">OR</span>
+              <div className="flex-1 h-px bg-gray-200" />
+            </div>
 
             <Form className="flex flex-col gap-5" onSubmit={onSubmit}>
               <TextField isRequired name="name" type="text">
                 <Label>Name</Label>
-                <Input
-                  placeholder="Enter your name"
-                  className="rounded-xl"
-                />
+                <Input placeholder="Enter your name" className="rounded-xl" />
                 <FieldError />
               </TextField>
 
               <TextField isRequired name="image" type="text">
                 <Label>Image URL</Label>
-                <Input
-                  placeholder="Profile image URL"
-                  className="rounded-xl"
-                />
+                <Input placeholder="Profile image URL" className="rounded-xl" />
                 <FieldError />
               </TextField>
 
@@ -126,9 +137,7 @@ export default function SignUpPage() {
                 name="email"
                 type="email"
                 validate={(value) => {
-                  if (
-                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)
-                  ) {
+                  if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
                     return "Please enter a valid email address";
                   }
                   return null;
@@ -175,7 +184,7 @@ export default function SignUpPage() {
             </Form>
 
             <p className="mt-6 text-center text-sm text-gray-500">
-              Already have an account?{' '}
+              Already have an account?{" "}
               <span className="font-semibold text-pink-500 cursor-pointer hover:underline">
                 Sign In
               </span>
@@ -186,4 +195,3 @@ export default function SignUpPage() {
     </div>
   );
 }
-
