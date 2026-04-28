@@ -78,7 +78,7 @@ const Navbar = () => {
 
                 <Button
                   size="sm"
-                  variant="bordered"
+                  variant="outline"
                   onPress={handleSignOut}
                   className="rounded-full border-red-500/40 text-red-400 hover:bg-red-500/10"
                 >
@@ -144,9 +144,10 @@ const Navbar = () => {
             <div className="mt-8">
               {user ? (
                 <Button
+                 size="sm"
+                  variant="outline"
                   onPress={handleSignOut}
-                  variant="bordered"
-                  className="w-full rounded-2xl border-red-500/40 text-red-400 hover:bg-red-500/10"
+                  className="rounded-full border-red-500/40 text-red-400 hover:bg-red-500/10"
                 >
                   Sign Out
                 </Button>

@@ -10,7 +10,6 @@ import {
   ShieldCheck,
   Sparkles,
   ImageIcon,
-  Pencil,
 } from "lucide-react";
 import UpdateUser from "@/components/ui/UpdateUser";
 
@@ -119,8 +118,7 @@ const ProfilePage = () => {
 
                 {/* Actions */}
                 <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
-                    <UpdateUser user={user} />
-                  
+                  <UpdateUser user={user} />
 
                   <Button
                     variant="bordered"

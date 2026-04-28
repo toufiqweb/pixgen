@@ -74,9 +74,9 @@ const Banner = () => {
           <SwiperSlide key={index}>
             <div
               onClick={handleClick}
-              className="relative h-[55vh] md:h-[65vh] w-full cursor-pointer overflow-hidden"
+              className="relative h-[80vh] md:h-[75vh] lg:h-[65vh] w-full cursor-pointer overflow-hidden"
             >
-              {/* Background Image */}
+              {/* Background   Image */}
               <div
                 style={{
                   backgroundImage: `url(${slide.image})`,

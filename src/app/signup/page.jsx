@@ -34,11 +34,11 @@ export default function SignUpPage() {
 
   // Hello@1234
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#050816] via-[#1f1147] to-[#3b0764] flex items-center justify-center px-4 py-10">
+    <div className="min-h-screen bg-linear-to-br from-[#050816] via-[#1f1147] to-[#3b0764] flex items-center justify-center px-4 py-10">
       <Card className="w-full max-w-5xl overflow-hidden rounded-[32px] border border-white/10 bg-white/10 backdrop-blur-2xl shadow-2xl">
         <div className="grid md:grid-cols-2">
           {/* Left Side */}
-          <div className="hidden md:flex flex-col justify-center bg-gradient-to-br from-pink-500/20 via-purple-500/10 to-cyan-500/10 p-10 text-white relative overflow-hidden">
+          <div className="hidden md:flex flex-col justify-center bg-linear-to-br from-pink-500/20 via-purple-500/10 to-cyan-500/10 p-10 text-white relative overflow-hidden">
             <div className="absolute -top-10 -left-10 h-40 w-40 rounded-full bg-pink-500/20 blur-3xl" />
             <div className="absolute bottom-0 right-0 h-52 w-52 rounded-full bg-cyan-500/20 blur-3xl" />
 
@@ -176,7 +176,7 @@ export default function SignUpPage() {
 
               <Button
                 type="submit"
-                className="h-12 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold shadow-lg"
+                className="h-12 rounded-2xl bg-linear-to-r from-pink-500 to-purple-600 text-white font-semibold shadow-lg"
               >
                 <Check />
                 Create Account
