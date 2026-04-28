@@ -1,2 +1,28 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
+
+
+
+
+
+
+
+/* Banner image slider - Swiper Pagination */
+.custom-swiper .swiper-pagination {
+  bottom: 24px !important;
+}
+
+.custom-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: white !important;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.custom-swiper .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 999px;
+  opacity: 1;
+  background: white !important;
+}
