@@ -22,7 +22,7 @@ const TopGenerationPhotos = async () => {
       <div className="flex items-center justify-center">
        <Link href={"/all-photos"}>
         <Button variant="outline" size="lg">
-          <span className="bg-linear-to-r from-pink-500 via-purple-500 to-red-500 bg-clip-text text-transparent drop-shadow-sm">
+          <span className="bg-linear-to-r from-pink-500   via-purple-500 to-red-500 bg-clip-text text-transparent drop-shadow-sm">
             View all photos
           </span>
           <GoArrowUpRight className="text-pink-600" />

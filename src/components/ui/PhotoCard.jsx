@@ -6,7 +6,7 @@ import { FaDownload, FaHeart } from "react-icons/fa";
 
 const PhotoCard = ({ photo }) => {
   return (
-    <Card className="group relative min-h-[410px] overflow-hidden rounded-3xl border-0 shadow-lg">
+    <Card className="group relative min-h-102.5 overflow-hidden rounded-3xl border-0 shadow-lg">
       {/* Image */}
       <div className="absolute inset-0 overflow-hidden">
         <Image
