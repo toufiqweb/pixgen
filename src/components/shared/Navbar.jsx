@@ -57,7 +57,7 @@ const Navbar = () => {
           {/* Desktop Right */}
           <div className="hidden md:flex items-center gap-4">
             {isPending ? (
-              <div className="h-10 w-28 animate-pulse rounded-full bg-white/10" />
+              <div className="h-10 w-28  rounded-full bg-white/10" />
             ) : user ? (
               <div className="flex items-center gap-4">
                 <Link href="/profile">
