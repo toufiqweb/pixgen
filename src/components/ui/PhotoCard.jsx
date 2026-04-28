@@ -61,7 +61,7 @@ const PhotoCard = ({ photo }) => {
           transition-all duration-300
         "
             >
-              View details
+              View
             </Button>
           </Link>
         </div>
