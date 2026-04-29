@@ -40,12 +40,18 @@ export default function SignUpPage() {
     }
   };
 
-  const handleGoogleLogin = async () => {
-    const data = await authClient.signIn.social({
-      provider: "google",
+  // const handleGoogleLogin = async () => {
+  //   const data = await authClient.signIn.social({
+  //     provider: "google",
+  //   });
+  // };
+
+  const handleSocialLogin = async (provider) => {
+    await authClient.signIn.social({
+      provider,
+      callbackURL: "/",
     });
   };
-
   // Hello@1234
   return (
     <div className="min-h-screen bg-linear-to-br from-[#050816] via-[#1f1147] to-[#3b0764] flex items-center justify-center px-4 py-10">
@@ -106,7 +112,7 @@ export default function SignUpPage() {
             {/* Social Login */}
             <div className="grid grid-cols-3 gap-3 mb-6 justify-items-center">
               <Button
-                onClick={handleGoogleLogin}
+                onPress={() => handleSocialLogin("google")}
                 variant="bordered"
                 className="h-12 rounded-2xl border-gray-300 hover:bg-gray-100"
               >
@@ -114,6 +120,7 @@ export default function SignUpPage() {
               </Button>
 
               <Button
+                onPress={() => handleSocialLogin("github")}
                 variant="bordered"
                 className="h-12 rounded-2xl border-gray-300 hover:bg-gray-100"
               >
@@ -121,6 +128,7 @@ export default function SignUpPage() {
               </Button>
 
               <Button
+                onPress={() => handleSocialLogin("facebook")}
                 variant="bordered"
                 className="h-12 rounded-2xl border-gray-300 hover:bg-gray-100"
               >

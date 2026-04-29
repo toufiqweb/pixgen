@@ -106,5 +106,8 @@ const Stat = ({ label, value }) => {
   );
 };
 
+
+
+
 export default PhotoDetailsPage;
 

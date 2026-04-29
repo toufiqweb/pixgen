@@ -30,6 +30,11 @@ export default function SignInPage() {
       callbackURL: "/",
     });
   };
+  // const handleGoogleLogin = async () => {
+  //     const data = await authClient.signIn.social({
+  //       provider: "google",
+  //     });
+  //   };
 
   return (
     <div className="min-h-screen bg-linear-to-br from-[#050816] via-[#1f1147] to-[#3b0764] flex items-center justify-center px-4 py-10">
