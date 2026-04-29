@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -20,8 +21,8 @@ const ProfilePage = () => {
 
   if (isPending) {
     return (
-      <div className="min-h-screen bg-[#050816] flex items-center justify-center">
-        <Card className="w-full max-w-5xl bg-white/5 border border-white/10 backdrop-blur-xl p-8 rounded-3xl">
+      <div className="min-h-screen bg-gradient-to-br from-[#f4f7ff] via-[#eef2ff] to-[#ffffff] flex items-center justify-center px-4">
+        <Card className="w-full max-w-5xl bg-white/70 border border-black/5 backdrop-blur-xl p-8 rounded-3xl shadow-xl">
           <div className="flex flex-col md:flex-row gap-8">
             <Skeleton className="rounded-full w-32 h-32" />
             <div className="flex-1 space-y-4">
@@ -36,24 +37,24 @@ const ProfilePage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-[#050816] via-[#12082f] to-[#2b0b45] px-4 py-10">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-[#f4f7ff] via-[#eef2ff] to-[#ffffff] px-4 py-10 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Glow Effects */}
-        <div className="absolute top-32 left-10 h-72 w-72 rounded-full bg-pink-500/20 blur-[120px]" />
-        <div className="absolute top-60 right-10 h-72 w-72 rounded-full bg-purple-500/20 blur-[120px]" />
+        <div className="absolute top-32 left-10 h-72 w-72 rounded-full bg-pink-300/30 blur-[120px]" />
+        <div className="absolute top-60 right-10 h-72 w-72 rounded-full bg-purple-300/30 blur-[120px]" />
 
         {/* Profile Hero */}
-        <Card className="relative overflow-hidden rounded-[36px] border border-white/10 bg-white/10 backdrop-blur-2xl shadow-2xl">
+        <Card className="relative overflow-hidden rounded-[36px] border border-black/5 bg-white/70 backdrop-blur-2xl shadow-xl">
           {/* Background Glow */}
-          <div className="absolute inset-0 bg-linear-to-br from-pink-500/10 via-transparent to-purple-500/10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-200/30 via-transparent to-purple-200/30" />
 
           <div className="relative z-10 p-8 md:p-12">
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10">
               {/* Avatar */}
               <div className="relative group">
-                <div className="absolute inset-0 rounded-full bg-linear-to-r from-pink-500 to-purple-600 blur-xl opacity-50 group-hover:opacity-80 transition duration-500" />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 blur-xl opacity-40 group-hover:opacity-70 transition duration-500" />
 
-                <Avatar className="w-36 h-36 text-4xl ring-4 ring-white/20 relative z-10 hover:scale-105 transition duration-500">
+                <Avatar className="w-36 h-36 text-4xl ring-4 ring-black/10 relative z-10 hover:scale-105 transition duration-500">
                   <Avatar.Image alt={user?.name} src={user?.image} />
                   <Avatar.Fallback>JD</Avatar.Fallback>
                 </Avatar>
@@ -62,7 +63,7 @@ const ProfilePage = () => {
               {/* User Info */}
               <div className="flex-1 text-center lg:text-left">
                 <div className="flex flex-col lg:flex-row lg:items-center gap-4">
-                  <h1 className="text-4xl font-bold text-white">
+                  <h1 className="text-4xl font-bold text-gray-900">
                     {user?.name || "Guest User"}
                   </h1>
 
@@ -70,47 +71,47 @@ const ProfilePage = () => {
                     color="secondary"
                     variant="flat"
                     startContent={<ShieldCheck size={14} />}
-                    className="bg-purple-500/20 text-purple-200 border border-purple-400/20"
+                    className="bg-purple-100 text-purple-700 border border-purple-200"
                   >
                     Verified Account
                   </Chip>
                 </div>
 
-                <p className="text-white/60 mt-3 max-w-2xl">
+                <p className="text-gray-600 mt-3 max-w-2xl leading-7">
                   Welcome to your creative dashboard. Manage your account,
                   profile, and AI image generation experience.
                 </p>
 
                 {/* User Meta */}
                 <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <Card className="bg-white/5 border border-white/10 backdrop-blur-md p-4 rounded-2xl">
+                  <Card className="bg-white/70 border border-black/5 backdrop-blur-md p-4 rounded-2xl shadow-sm">
                     <div className="flex items-center gap-3">
-                      <Mail className="text-pink-400" size={18} />
+                      <Mail className="text-pink-500" size={18} />
                       <div>
-                        <p className="text-xs text-white/50">Email</p>
-                        <p className="text-sm text-white truncate">
+                        <p className="text-xs text-gray-500">Email</p>
+                        <p className="text-sm text-gray-800 truncate">
                           {user?.email}
                         </p>
                       </div>
                     </div>
                   </Card>
 
-                  <Card className="bg-white/5 border border-white/10 backdrop-blur-md p-4 rounded-2xl">
+                  <Card className="bg-white/70 border border-black/5 backdrop-blur-md p-4 rounded-2xl shadow-sm">
                     <div className="flex items-center gap-3">
-                      <CalendarDays className="text-cyan-400" size={18} />
+                      <CalendarDays className="text-cyan-500" size={18} />
                       <div>
-                        <p className="text-xs text-white/50">Member Since</p>
-                        <p className="text-sm text-white">April 2026</p>
+                        <p className="text-xs text-gray-500">Member Since</p>
+                        <p className="text-sm text-gray-800">April 2026</p>
                       </div>
                     </div>
                   </Card>
 
-                  <Card className="bg-white/5 border border-white/10 backdrop-blur-md p-4 rounded-2xl">
+                  <Card className="bg-white/70 border border-black/5 backdrop-blur-md p-4 rounded-2xl shadow-sm">
                     <div className="flex items-center gap-3">
-                      <Sparkles className="text-purple-400" size={18} />
+                      <Sparkles className="text-purple-500" size={18} />
                       <div>
-                        <p className="text-xs text-white/50">Plan</p>
-                        <p className="text-sm text-white">Free Plan</p>
+                        <p className="text-xs text-gray-500">Plan</p>
+                        <p className="text-sm text-gray-800">Free Plan</p>
                       </div>
                     </div>
                   </Card>
@@ -122,7 +123,7 @@ const ProfilePage = () => {
 
                   <Button
                     variant="bordered"
-                    className="rounded-2xl border-white/20 text-white hover:bg-white/10"
+                    className="rounded-2xl border-gray-300 text-gray-800 hover:bg-gray-100"
                   >
                     Account Settings
                   </Button>
@@ -134,57 +135,59 @@ const ProfilePage = () => {
 
         {/* Stats Cards */}
         <div className="grid md:grid-cols-3 gap-6 mt-8">
-          <Card className="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-6 hover:-translate-y-1 transition duration-300">
+          <Card className="rounded-3xl border border-black/5 bg-white/70 backdrop-blur-xl p-6 hover:-translate-y-1 transition duration-300 shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-white/60 text-sm">Generated Images</p>
-                <h2 className="text-3xl font-bold text-white mt-2">148</h2>
+                <p className="text-gray-500 text-sm">Generated Images</p>
+                <h2 className="text-3xl font-bold text-gray-900 mt-2">148</h2>
               </div>
 
-              <div className="p-4 rounded-2xl bg-pink-500/20">
-                <ImageIcon className="text-pink-400" />
+              <div className="p-4 rounded-2xl bg-pink-100">
+                <ImageIcon className="text-pink-500" />
               </div>
             </div>
           </Card>
 
-          <Card className="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-6 hover:-translate-y-1 transition duration-300">
+          <Card className="rounded-3xl border border-black/5 bg-white/70 backdrop-blur-xl p-6 hover:-translate-y-1 transition duration-300 shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-white/60 text-sm">Credits Remaining</p>
-                <h2 className="text-3xl font-bold text-white mt-2">520</h2>
+                <p className="text-gray-500 text-sm">Credits Remaining</p>
+                <h2 className="text-3xl font-bold text-gray-900 mt-2">520</h2>
               </div>
 
-              <div className="p-4 rounded-2xl bg-purple-500/20">
-                <Sparkles className="text-purple-400" />
+              <div className="p-4 rounded-2xl bg-purple-100">
+                <Sparkles className="text-purple-500" />
               </div>
             </div>
           </Card>
 
-          <Card className="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-6 hover:-translate-y-1 transition duration-300">
+          <Card className="rounded-3xl border border-black/5 bg-white/70 backdrop-blur-xl p-6 hover:-translate-y-1 transition duration-300 shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-white/60 text-sm">Account Status</p>
-                <h2 className="text-3xl font-bold text-white mt-2">Active</h2>
+                <p className="text-gray-500 text-sm">Account Status</p>
+                <h2 className="text-3xl font-bold text-gray-900 mt-2">Active</h2>
               </div>
 
-              <div className="p-4 rounded-2xl bg-cyan-500/20">
-                <ShieldCheck className="text-cyan-400" />
+              <div className="p-4 rounded-2xl bg-cyan-100">
+                <ShieldCheck className="text-cyan-500" />
               </div>
             </div>
           </Card>
         </div>
 
         {/* About Section */}
-        <Card className="mt-8 rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-8">
-          <h2 className="text-2xl font-bold text-white mb-4">About Profile</h2>
+        <Card className="mt-8 rounded-3xl border border-black/5 bg-white/70 backdrop-blur-xl p-8 shadow-sm">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            About Profile
+          </h2>
 
-          <div className="h-px w-full bg-white/10 my-6" />
+          <div className="h-px w-full bg-black/10 my-6" />
 
-          <p className="text-white/70 leading-8">
+          <p className="text-gray-600 leading-8">
             This modern profile dashboard is designed for your AI creative
             platform. You can display user details, generated image stats,
             premium plan information, and account settings with beautiful
-            glassmorphism UI and animated effects.
+            glassmorphism UI and elegant light-mode aesthetics.
           </p>
         </Card>
       </div>
@@ -193,3 +196,4 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+

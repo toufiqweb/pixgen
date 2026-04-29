@@ -1,7 +1,12 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
+import { authClient } from "@/lib/auth-client";
 
 const Footer = () => {
+  const { data: session } = authClient.useSession();
+
+  const user = session?.user;
   return (
     <footer className="relative mt-24">
       <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
@@ -30,8 +35,10 @@ const Footer = () => {
                 height={32}
                 className="dark:brightness-200"
               />
-              <h2 className="text-xl font-semibold  dark:text-white  tracking-wide bg-linear-to-r from-pink-500 via-purple-500 
-               to-red-500 bg-clip-text text-transparent drop-shadow-sm">
+              <h2
+                className="text-xl font-semibold  dark:text-white  tracking-wide bg-linear-to-r from-pink-500 via-purple-500 
+               to-red-500 bg-clip-text text-transparent drop-shadow-sm"
+              >
                 pixgen
               </h2>
             </div>
@@ -119,7 +126,7 @@ const Footer = () => {
             </p>
 
             <Link
-              href="/signup"
+              href={`${user? "/" : "/signup"}`}
               className="inline-flex items-center justify-center  rounded-full 
               bg-black dark:bg-white dark:text-black text-sm  
               hover:scale-[1.02]  hover:shadow-black/10 dark:hover:shadow-white/10 
