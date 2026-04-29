@@ -4,8 +4,11 @@ import { authClient } from "@/lib/auth-client";
 import { Button, Card, Form, Input, Label, TextField } from "@heroui/react";
 import { FaGoogle, FaGithub, FaFacebookF } from "react-icons/fa";
 import Link from "next/link";
+import { Eye, EyeOff } from "lucide-react";
+import { useState } from "react";
 
 export default function SignInPage() {
+  const [showPassword, setShowPassword] = useState(false);
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -123,7 +126,20 @@ export default function SignInPage() {
 
               <TextField isRequired name="password" type="password">
                 <Label>Password</Label>
-                <Input placeholder="Enter your password" />
+                <div className={"relative"}>
+                  <Input
+                    className={"w-full"}
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Enter your password"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="text-gray-500 hover:text-gray-800 transition absolute top-2 right-3"
+                  >
+                    {showPassword ? <Eye size={18} /> : <EyeOff size={18} />}
+                  </button>
+                </div>
               </TextField>
 
               <div className="flex justify-end w-full">

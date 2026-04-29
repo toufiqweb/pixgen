@@ -12,9 +12,14 @@ import {
   TextField,
   Description,
 } from "@heroui/react";
+import { Eye, EyeOff } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { FaGoogle, FaGithub, FaFacebookF } from "react-icons/fa";
 
 export default function SignUpPage() {
+  const router = useRouter();
+  const [showPassword, setShowPassword] = useState(false);
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -30,6 +35,15 @@ export default function SignUpPage() {
       image,
     });
     console.log({ data, error });
+    if (!error) {
+      router.push("/");
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
   };
 
   // Hello@1234
@@ -92,6 +106,7 @@ export default function SignUpPage() {
             {/* Social Login */}
             <div className="grid grid-cols-3 gap-3 mb-6 justify-items-center">
               <Button
+                onClick={handleGoogleLogin}
                 variant="bordered"
                 className="h-12 rounded-2xl border-gray-300 hover:bg-gray-100"
               >
@@ -167,10 +182,26 @@ export default function SignUpPage() {
                 }}
               >
                 <Label>Password</Label>
-                <Input placeholder="Enter your password" />
+
+                <div className={"relative"}>
+                  <Input
+                    className={"w-full"}
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Enter your password"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="text-gray-500 hover:text-gray-800 transition absolute top-2 right-3"
+                  >
+                    {showPassword ? <Eye size={18} /> : <EyeOff size={18} />}
+                  </button>
+                </div>
+
                 <Description>
                   Must be at least 8 characters with 1 uppercase and 1 number
                 </Description>
+
                 <FieldError />
               </TextField>
 
