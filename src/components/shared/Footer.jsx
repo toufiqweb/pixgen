@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <footer className="relative mt-24">
       {/* Divider */}
-      <div className="mt-12 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+      <div className="mt-12 h-px w-full  bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
       {/* Background */}
       <div className="absolute inset-0 -z-10 bg-white" />
